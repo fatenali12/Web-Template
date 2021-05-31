@@ -1,0 +1,34 @@
+.head-with-border {
+    position: relative;
+    h2 {
+        text-align: center;
+        background-color: $greenColor;
+        color: #FFF;
+        width: 400px;
+        margin: 40px auto;
+        padding: 10px 15px;
+        border-radius: 15px;
+        text-transform: uppercase;
+        &:hover {
+            color: $greenColor;
+            background-color: #FFF;
+            border: 2px solid $greenColor;
+            box-shadow: -1px 2px 16px 0px rgba(8, 83, 93, 0.75);
+            -webkit-box-shadow: -1px 2px 16px 0px rgba(8, 83, 93, 0.75);
+            -moz-box-shadow: -1px 2px 16px 0px rgba(8, 83, 93, 0.75);
+        }
+        @media #{$maxMobile} {
+            width: 300px;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1.5px;
+            background-color: $grayColor;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
